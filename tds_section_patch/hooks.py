@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Tax Withholding Category": "public/js/tax_withholding_category.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -83,7 +83,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "tds_section_patch.install.before_install"
-# after_install = "tds_section_patch.install.after_install"
+after_install = "tds_section_patch.setup.setup_tds_section_field"
+after_migrate = "tds_section_patch.setup.setup_tds_section_field"
 
 # Uninstallation
 # ------------
